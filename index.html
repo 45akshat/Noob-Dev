@@ -510,9 +510,9 @@
 
 <body>
 
-<script type="module">
+ <script type="module">
   // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
+//   import { initializeApp a} from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-analytics.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -522,26 +522,58 @@
   const firebaseConfig = {
     apiKey: "AIzaSyCZphh-5EHOM8hzosHtYXGfr4SGpLqdKXo",
     authDomain: "evident-airline-328516.firebaseapp.com",
+    databaseURL: "https://evident-airline-328516-default-rtdb.asia-southeast1.firebasedatabase.app",
     projectId: "evident-airline-328516",
     storageBucket: "evident-airline-328516.appspot.com",
     messagingSenderId: "398947161740",
     appId: "1:398947161740:web:2532c88a5c1b020bf68da9",
     measurementId: "G-VZN627Q2DY"
   };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
   
-  function writedata () {
-firebase.database().ref("user").set({
-  firstname: document. getElementById("fname").value,
-  lastname: document. getElementById("lname").value,
-  country: document. getElementById("country").value,
-  subject: document. getElementById("subject").value,
+  firebase.initializeApp(firebaseConfig);
+  var evident-airline-328516 fitrbase.database().ref("evident-airline-328516")
+  document.getElementByID("evident-airline-328516").addEventListener("submit", submitForm);
   
-});
+  function submitForm(e){
+  e.preventDefault();
+    
+  var fname = getElementVal("fname")
+  var lname = getElementVal("lname")
+  var country = getElementVal("country")
+  var subject = getElementVal("subject")
+  
 }
+  
+  const saveMessages = (fname, lname, country, subject) => {
+    var newcontactForm = evident-airline-328516.puch();
+    
+    newcontactForm.set({
+     fname: fname,
+     lname: lname,
+     country: country,
+     suubjecct: subject,
+     
+     saveMessages(fname, lname, country, subject);
+    }
+  }
+  
+  const getElementVal = (id) => {
+    return document.getElementByID(id).value;
+  };
+  
+//   // Initialize Firebase
+//   const app = initializeApp(firebaseConfig);
+//   const analytics = getAnalytics(app);
+  
+//   function writedata () {
+// firebase.database().ref("user").set({
+//   firstname: document. getElementById("fname").value,
+//   lastname: document. getElementById("lname").value,
+//   country: document. getElementById("country").value,
+//   subject: document. getElementById("subject").value,
+  
+// });
+// }
   
   
 </script>
