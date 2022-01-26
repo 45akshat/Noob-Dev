@@ -510,16 +510,16 @@
 
 <body>
 
- <script type="module">
+<script type="module" >
   // Import the functions you need from the SDKs you need
-  import { initializeApp a} from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  import { initializeApp a } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-analytics.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
     apiKey: "AIzaSyCZphh-5EHOM8hzosHtYXGfr4SGpLqdKXo",
     authDomain: "evident-airline-328516.firebaseapp.com",
     databaseURL: "https://evident-airline-328516-default-rtdb.asia-southeast1.firebasedatabase.app",
@@ -528,36 +528,41 @@
     messagingSenderId: "398947161740",
     appId: "1:398947161740:web:2532c88a5c1b020bf68da9",
     measurementId: "G-VZN627Q2DY"
-  };
-  
-  firebase.initializeApp(firebaseConfig);
-  var evident-airline-328516DB = firebase.database().ref("evident-airline-328516");
-  document.getElementByID("containerform").addEventListener("submit", submitForm);
-  
-  function submitForm(e) {
-  e.preventDefault();
-    
-  var fname = getElementVal("fname");
-  var lname = getElementVal("lname");
-  var country = getElementVal("country");
-  var subject = getElementVal("subject");
-  
+};
+
+firebase.initializeApp(firebaseConfig);
+var evident-airline - 328516DB = firebase.database().ref("evident-airline-328516");
+document.getElementByID("containerform").addEventListener("submit", submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+
+    var fname = getElementVal("fname");
+    var lname = getElementVal("lname");
+    var country = getElementVal("country");
+    var subject = getElementVal("subject");
+
+    console.log(fname, lname, country, subject);
+
 }
-  
-  const saveMessages = (fname, lname, country, subject) => {
-    var newcontactForm = evident-airline-328516DB.push();
-    
-    newcontactForm.set({
-     fname: fname,
-     lname: lname,
-     country: country,
-     subject: subject,
-     
-     saveMessages(fname, lname, country, subject);
-    });
-  }
-  
-//   const getElementVal = (id) => {
+
+const saveMessages = (fname, lname, country, subject) => {
+    var newcontactForm = evident - airline - 328516DB.push();
+
+    newcontactForm.set
+        (
+
+            fname: fname,
+            lname: lname,
+            country: country,
+            subject: subject,
+
+            saveMessages(fname, lname, country, subject);
+            
+        );
+        }
+
+{/* //   const getElementVal = (id) => {
 //     return document.getElementByID(id).value;
 //   };
   
@@ -574,8 +579,8 @@
   
 // });
 // }
-  
-  
+   */}
+
 </script>
 
   <div class="header_1">
