@@ -531,30 +531,30 @@
   };
   
   firebase.initializeApp(firebaseConfig);
-  var evident-airline-328516 fitrbase.database().ref("evident-airline-328516")
-  document.getElementByID("evident-airline-328516").addEventListener("submit", submitForm);
+  var evident-airline-328516DB = firebase.database().ref("evident-airline-328516");
+  document.getElementByID("containerform").addEventListener("submit", submitForm);
   
-  function submitForm(e){
+  function submitForm(e) {
   e.preventDefault();
     
-  var fname = getElementVal("fname")
-  var lname = getElementVal("lname")
-  var country = getElementVal("country")
-  var subject = getElementVal("subject")
+  var fname = getElementVal("fname");
+  var lname = getElementVal("lname");
+  var country = getElementVal("country");
+  var subject = getElementVal("subject");
   
 }
   
   const saveMessages = (fname, lname, country, subject) => {
-    var newcontactForm = evident-airline-328516.puch();
+    var newcontactForm = evident-airline-328516DB.push();
     
     newcontactForm.set({
      fname: fname,
      lname: lname,
      country: country,
-     suubjecct: subject,
+     subject: subject,
      
      saveMessages(fname, lname, country, subject);
-    }
+    });
   }
   
 //   const getElementVal = (id) => {
